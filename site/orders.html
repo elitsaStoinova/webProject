@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Поръчки</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      a:link{
+          color: white;
+      }
+
+      a:visited{
+          color: white;
+      }
+
+      a:hover{
+          color: #814C9E;
+      }
+
+      a:active{
+          color:wheat;
+      }
+  </style>
+</head>
+
+<body style="background-color: #D1BEDB; font-family: 'Montserrat', sans-serif;">
+  <div class="topnav" style="margin-top: 50px;">
+    <a class="active" href="index.html" >За фирмата</a>
+    <a href="products.html">Продукти</a>
+    <a href="orders.html" style="background-color: #A578BE; border-radius: 25px; padding: 15px;">Поръчки</a>
+    <a href="opinions.html">Мнения</a>
+    <a href="jobApplication.html">Работа</a>
+  </div> 
+
+      <form class="prod" style="margin-top: 100px;">
+        <h3>Поръчкова форма</h3>
+        <label><b>Изберете продукт</b></label><br>
+        <select id="products" class="products">
+          <option value="panelOne">Еко-Овлажняващ Крем "Herbal Hydrate"</option>
+          <option value="pabelTwo">Антиоксидантен Серум "Glow Essence"</option>
+          <option value="panelThree">Почистваща Маска с Активен Въглен "Pore Purify"</option>
+          <option value="panelFour">Освежаващ Тоник "Rose Refresh"</option>
+        </select> 
+        <br>
+        <label><b>Количество</b></label><br>
+        <input type="number" min="1" max="30"><br>
+        <label><b>Име Фамилия</b></label><br>
+        <input type="text" class="inp"><br>
+        <label><b>Телефонен номер</b></label><br>
+        <label>+359 </label>
+        <input type="text" class="inp" style="margin-left: 0; width: 290px;"><br>
+        <label><b>Имейл</b></label><br>
+        <input type="text" class="inp"><br>
+        <label><b>Адрес за доставка</b></label><br>
+        <input type="text" class="inp"><br>
+        <label><b>Изберете начин на плащане</b></label><br>
+        <input type="radio" class="radio" id="op1" name="op1" value="Bank">
+        <label for="op1" class="radioLabel">Банков превод</label><br>
+        <input type="radio" class="radio" id="op2" name="op2" value="Online">
+        <label for="op2" class="radioLabel">Онлайн плащане</label><br>
+        <input type="radio" class="radio" id="op3" name="op3" value="Cash">
+        <label for="op3" class="radioLabel">Наложен платеж</label><br>
+        <label><b>Желаете ли фактура?</b></label><br>
+        <input type="checkbox" style="width: 30px;"  id="op1" name="op1" value="yes">
+        <label for="op1" >Да</label><br>
+        <input type="checkbox" style="width: 30px;" id="op2" name="op2" value="no">
+        <label for="op2" >Не</label><br>
+        <input type="submit" value="SUBMIT" style= "background-color: #A578BE; width: 150px; border-radius: 10px; padding: 5px; padding-top: 8px; text-align: center; margin-top: 20px;  height: 40px;">
+      </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Развитие</title>
+</head>
+<body class="jobBody" style="font-family: 'Montserrat', sans-serif; background-color: #D1BEDB;">
+<h1 style="text-align: center;">Графика на приходите на фирмата през последната година</h1>
+<div style="background-color: rgb(210, 210, 210,0.8);  margin-top: 100px; border-radius: 50px; height: 350px; padding: 50px;">
+<canvas style="margin-top: 20px;" id="salesGraph" width="600" height="400"></canvas>
+</div>
+<div style="background-color: #A578BE; height: 30px; width: 150px; border-radius: 10px; padding: 5px; padding-top: 8px; text-align: center; margin-top: 20px; margin-left: 700px;">
+    <a href="index.html">Назад</a> 
+</div>
+
+<script>
+    let canvas = document.getElementById("salesGraph");
+    let ctx = canvas.getContext("2d");
+
+
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let sales = [5000, 5200, 4800, 5300, 5500, 5100, 5600, 5400, 5700, 5300, 5200, 5800];
+
+
+    let maxSales = Math.max(...sales);
+    let graphHeight = canvas.height - 30;
+
+for(let i = 0; i < sales.length; i++) {
+    let x = (canvas.width / sales.length) * i;
+    let y = graphHeight - (graphHeight * (sales[i] / maxSales));
+
+
+    let barWidth = (canvas.width / sales.length) * 0.8;
+    let barHeight = (graphHeight * sales[i] / maxSales);
+    
+
+    ctx.fillRect(x, graphHeight - barHeight, barWidth, barHeight);
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(months[i], x + (barWidth / 2), canvas.height - 15);
+}
+
+</script>
+
+</body>
+</html>

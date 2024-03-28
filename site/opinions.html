@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Мнения</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      a:link{
+          color: white;
+      }
+
+      a:visited{
+          color: white;
+      }
+
+      a:hover{
+          color: #814C9E;
+      }
+
+      a:active{
+          color:wheat;
+      }
+  </style>
+</head>
+<body style="background-color: #D1BEDB; font-family: 'Montserrat', sans-serif;">
+  <div class="topnav" style="margin-top: 50px;">
+    <a class="active" href="index.html" >За фирмата</a>
+    <a href="products.html">Продукти</a>
+    <a href="orders.html">Поръчки</a>
+    <a href="opinions.html"  style="background-color: #A578BE; border-radius: 25px; padding: 15px;">Мнения</a>
+    <a href="jobApplication.html">Работа</a>
+  </div> 
+      <form class="prod" style="margin-top: 50px; width: 700px;">
+        <h3 style="margin-top: 20px;">Обратна връзка. Моля споделете вашето мнение с нас!</h3>
+        <label >Лична информация (по избор)</label><br>
+        <label>Име Фамилия</label><br>
+        <input type="text" class="inp"><br>
+        <label>Как оценявате нашата компания или продукт?</label><br>
+        <input type="radio" class="radio" id="op1" name="op1" value="Bad">
+        <input type="radio" class="radio" id="op2" name="op2" value="Middle">
+        <input type="radio" class="radio" id="op3" name="op3" value="Good">
+        <input type="radio" class="radio" id="op4" name="op4" value="Excellent"><br>
+        <label for="op1" class="radioLabel" style="margin-left: 40px;">Слабо</label>
+        <label for="op2" class="radioLabel" style="margin-left: 30px;">Средно</label>
+        <label for="op3" class="radioLabel" style="margin-left: 30px;">Добре</label>
+        <label for="op4" class="radioLabel" style="margin-left: 30px;">Отлично</label><br>
+        <br>
+        <label>Как оценявате качеството на нашите продукти/услуги?</label><br>
+        <div>
+          <input type="range" id="quality" name="quality" min="0" max="10" /> <br>
+          <label>Лошо</label>  <label style="margin-left: 320px;">Отлично</label> 
+        </div>        
+        <br>
+        <label>Посещавали ли сте наш визически магазин? </label><br>
+        <input type="checkbox" style="width: 30px;"  id="op1" name="op1" value="yes">
+        <label for="op1" >Да</label>
+        <input type="checkbox" style="width: 30px;" id="op2" name="op2" value="no">
+        <label for="op2" >Не</label><br>
+        <label>Колко лесно беше да се свържете с нас?</label><br>
+        <select id="products" class="products">
+          <option value="one">Много лесно</option>
+          <option value="two">Лесно</option>
+          <option value="three">Трудно</option>
+          <option value="four">Много трудно</option>
+        </select> 
+        <br>
+        <label>Свободен коментар (по избор)</label><br>
+        <input type="text" class="inp" style="height: 150px;"><br>
+        <label>Дата на попълване</label><br>
+        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" /><br>
+        <input type="submit" value="Submit" style= "background-color: #A578BE; width: 150px; border-radius: 10px; padding: 5px; padding-top: 8px; text-align: center; margin-top: 20px;  height: 40px;">
+      </form>
+</body>
+</html>
